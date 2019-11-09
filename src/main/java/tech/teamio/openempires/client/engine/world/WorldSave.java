@@ -14,7 +14,15 @@
  * limitations under the License.
  */
 
-package tech.teamio.openempires;
+package tech.teamio.openempires.client.engine.world;
 
-public class OpenEmpires {
+import com.google.gson.annotations.Expose;
+
+import java.util.List;
+
+/**
+ * @author <a href="https://joezwet.me" target="_blank">Joe van der Zwet</a>
+ */
+public class WorldSave {
+    @Expose public List<VoxelData> voxels;
 }

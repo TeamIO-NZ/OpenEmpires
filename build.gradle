@@ -9,6 +9,9 @@ project.ext.steamworks4jServerVersion = "1.8.0"
 project.ext.steamworks4jVersion = "1.8.0"
 project.ext.commonsioVersion = "2.6"
 project.ext.log4jVersion = "2.12.1"
+project.ext.joptVersion = "6.0-alpha-3"
+project.ext.fabricVersion = "0.6.3+build.168"
+project.ext.gsonVersion       = "2.8.5"
 
 switch (OperatingSystem.current()) {
     case OperatingSystem.LINUX:
@@ -29,7 +32,7 @@ switch (OperatingSystem.current()) {
 group 'tech.teamio'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = 1.8
+sourceCompatibility = targetCompatibility = JavaVersion.VERSION_1_8
 
 repositories {
     mavenCentral()
@@ -42,6 +45,10 @@ dependencies {
     annotationProcessor "org.apache.logging.log4j:log4j-core:$log4jVersion"
 
     implementation "commons-io:commons-io:$commonsioVersion"
+
+    implementation "net.sf.jopt-simple:jopt-simple:$joptVersion"
+
+    implementation "com.google.code.gson:gson:$gsonVersion"
 
     implementation platform("org.lwjgl:lwjgl-bom:$lwjglVersion")
     implementation "org.lwjgl:lwjgl"
